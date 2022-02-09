@@ -136,3 +136,9 @@ margin-bottom: 10px;
   border-radius: 15px;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 800px){
+  .container{
+    width: 80%;
+  }
+}
