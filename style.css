@@ -84,6 +84,8 @@ margin-bottom: 10px;
 .list-task-container li{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  text-align: left;
   padding: 8px;
   margin: 10px;
   list-style: none;
@@ -91,6 +93,7 @@ margin-bottom: 10px;
   border-radius: 15px;
   margin-bottom: 10px;
 
+  word-break: break-all
 }
 
 .list-task-container li span{
@@ -101,6 +104,7 @@ margin-bottom: 10px;
   cursor: pointer;
   transition: .3s ease-in-out;
   font-weight: 600;
+/*   position: absolute; */
 }
 
 .list-task-container li span:hover{
