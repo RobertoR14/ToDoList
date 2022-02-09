@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Open+Sans:wght@400;500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+  background-color: rgb(221, 218, 218);
+  border-radius: 5px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input-btn{
+display: flex;
+justify-content: center;
+align-items: center;
+
+margin-top: 15px;
+}
+
+.input-btn input {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
+  margin-right: 10px;
+  border:  none;
+  border-radius: 3px;
+}
+
+.input-btn button{
+  width: 50px;
+  height: 45px;
+  border-radius: 30%;
+  border: none;
+  background: rgb(122, 235, 122);
+  padding: 2px 7px;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.input-btn button:hover{
+  background: rgb(81, 236, 81);
+}
+
+.container .header-contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.header-contain .logo{
+  margin-top: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header-contain h2{
+  margin-top: 50px;
+  font-size: 2em;
+
+}
+
+.list-task-container{
+margin-bottom: 10px;
+
+}
+
+.list-task-container ul{
+  padding-left: 0;
+  margin: 0 13px;
+  transition: .2s ease-in-out;
+}
+
+.list-task-container li{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 15px;
+  margin-bottom: 10px;
+
+}
+
+.list-task-container li span{
+  background-color: red;
+  border-radius: 50%;
+  padding: 1px 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.list-task-container li span:hover{
+  background: rgb(192, 0, 0);
+}
+
+.deleteAll{
+
+  border-radius: 5px;
+  border: none;
+  background-color: red;
+  padding: 2px 7px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.deleteAll:hover{
+  background: rgb(192, 0, 0);
+}
+
+.error{
+  color: red;
+}

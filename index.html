@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Haters Inc | To do page</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="header-contain">
+      <img src="img/Haters Inc Logo.png" class="logo" alt="">
+      <h2>Haters Inc.</h2>
+
+    </div>
+
+    <h3>To do list</h3>
+
+    <div class="input-btn">
+      <input type="text" placeholder="Add a new task">
+      <button onclick="addTask()">+</button>
+    </div>
+
+    <div class="list-task-container">
+      <ul>
+        <li>new task <span>x</span></li>
+      </ul>
+    </div>
+
+    <button class="deleteAll" onclick="deleteAll()">Delete all</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
