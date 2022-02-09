@@ -17,7 +17,7 @@ function loadLocalData(){
 
 function addTask(){
   const task = input.value;
-  if(task == ''){
+  if(task.trim() == ''){
     showError('The field is empty...');
     return;
   }
