@@ -80,6 +80,15 @@ function showError(error){
 }
 
 function deleteAll(){
-  tasks = [];
-  createHTML();
+
+  const task = input.value;
+  if(lisTask.textContent == ''){
+    showError('There is nothing to remove...');
+    return;
+  }else{
+    tasks = [];
+    createHTML();
+  }
+
+
 }

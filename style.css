@@ -127,5 +127,12 @@ margin-bottom: 10px;
 }
 
 .error{
-  color: red;
+  color: #fff;
+
+  padding: 8px;
+  margin: 10px;
+  list-style: none;
+  background: rgb(243, 105, 105);
+  border-radius: 15px;
+  margin-bottom: 10px;
 }
