@@ -52,6 +52,8 @@ function createHTML(){
       li.innerHTML = `${task.task} <span task-id="${task.id}">x</span>`;
 
       lisTask.prepend(li);
+      li.addEventListener('click', changeStateTask);
+      li.addEventListener('click', renderOrderedTask);
     });
   }
 
@@ -91,4 +93,26 @@ function deleteAll(){
   }
 
 
+}
+
+function changeStateTask(e){
+  e.target.classList.toggle('done');
+}
+
+const order = () => {
+  const done = [];
+  const toDo = [];
+
+  lisTask.childNodes.forEach(el => {
+    el.classList.contains('done') ? done.push(el) : toDo.push(el)
+  })
+
+  console.log(done);
+  return [...toDo, ...done];
+
+
+}
+
+const renderOrderedTask = () => {
+  order().forEach(el => lisTask.appendChild(el))
 }
