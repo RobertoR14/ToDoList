@@ -1,8 +1,10 @@
 const input = document.querySelector('.input-btn input');
 const lisTask = document.querySelector('.list-task-container ul');
 const message = document.querySelector('.list-task-container');
+const checkbox = document.querySelector('#completed');
 
 let tasks = [];
+let taskDone = [];
 
 loadLocalData();
 
@@ -17,6 +19,7 @@ function loadLocalData(){
 
 function addTask(){
   const task = input.value;
+
   if(task.trim() == ''){
     showError('The field is empty...');
     return;
@@ -38,6 +41,7 @@ function deleteTask(e){
   if(e.target.tagName == 'SPAN'){
     const deleteId = parseInt(e.target.getAttribute('task-id'));
     tasks = tasks.filter(task => task.id !== deleteId)
+    console.log(tasks)
     createHTML();
   }
 }
@@ -52,8 +56,12 @@ function createHTML(){
       li.innerHTML = `${task.task} <span task-id="${task.id}">x</span>`;
 
       lisTask.prepend(li);
-      li.addEventListener('click', changeStateTask);
+      li.addEventListener('click', (e) => {
+        e.target.classList.add('done');
+      });
       li.addEventListener('click', renderOrderedTask);
+
+
     });
   }
 
@@ -91,12 +99,6 @@ function deleteAll(){
     tasks = [];
     createHTML();
   }
-
-
-}
-
-function changeStateTask(e){
-  e.target.classList.toggle('done');
 }
 
 const order = () => {
@@ -107,12 +109,58 @@ const order = () => {
     el.classList.contains('done') ? done.push(el) : toDo.push(el)
   })
 
-  console.log(done);
   return [...toDo, ...done];
-
 
 }
 
 const renderOrderedTask = () => {
   order().forEach(el => lisTask.appendChild(el))
 }
+
+function filterDoneTask(){
+  const done = [];
+  const toDo = [];
+
+  lisTask.childNodes.forEach(el => {
+    el.classList.contains('done') ? done.push(el) : toDo.push(el)
+  })
+
+ return [...done];
+ console.log(taskDone);
+
+ /* else{
+    createHTML();
+   } */
+
+
+
+}
+
+ const filterDone = () => {
+
+
+  if(checkbox.checked){
+
+    let h3 = document.createElement('h3');
+    h3.innerHTML = '↑--------------------Completed Tasks--------------------↑';
+  
+    lisTask.prepend(h3);
+  filterDoneTask().forEach(el => {
+
+      const lis = document.createElement('li');
+
+
+      lis.innerHTML = `${el.textContent} <span task-id="${el.id}">x</span>`;
+      lis.classList.add('done');
+
+      lisTask.prepend(lis);
+      console.log(el);
+    } )
+/*     lisTask.childNodes.textContent = el) */
+  }else {
+    
+    createHTML();
+  }
+ }
+
+

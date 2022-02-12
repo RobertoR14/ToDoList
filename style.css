@@ -138,6 +138,12 @@ margin-bottom: 10px;
   background: rgb(192, 0, 0);
 }
 
+h3{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
 .error{
   color: #fff;
 
@@ -152,6 +158,22 @@ margin-bottom: 10px;
 .p-info{
   margin: 20px 0;
   color: rgb(131, 130, 130);;
+}
+
+.filter{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+.filter h3{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#completed{
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 800px){
