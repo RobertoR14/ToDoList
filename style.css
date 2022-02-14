@@ -8,12 +8,22 @@
 font-family: 'Open Sans', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container{
   background-color: rgb(221, 218, 218);
   border-radius: 5px;
   width: 60%;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+}
+
+.wave-container{
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .input-btn{
@@ -60,13 +70,13 @@ margin-top: 15px;
 }
 
 .header-contain .logo{
-  margin-top: 50px;
+  margin-top: 30px;
   width: 50px;
   margin-right: 10px;
 }
 
 .header-contain h2{
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 2em;
 
 }
@@ -128,7 +138,7 @@ margin-bottom: 10px;
   color: #fff;
   font-size: 1.2em;
   font-weight: 300;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 15px;
   cursor: pointer;
   transition: .3s ease-in-out;
@@ -174,6 +184,48 @@ margin-top: 20px;
 
 #completed{
   margin-right: 5px;
+}
+
+.bg-color{
+  width: 100%;
+  height: 8%;
+  background-color: #273036;
+  position: absolute;
+  bottom: 0;
+}
+
+.wave{
+  width: 600%;
+  height: 70%;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  background-image: url(img/wave.svg);
+  background-position: top;
+}
+
+.w1{
+  animation: w1 20s linear infinite;
+
+}
+
+
+@keyframes w1 {
+  0%{
+    margin-left: 0;
+  }
+  100%{
+    margin-left: -1440px;
+  }
+}
+
+
+input[type="checkbox"] + label {
+    font-weight: bold;
+    line-height: 3em;
+}
+input[type="checkbox"]:checked + label {
+    color: #0fbf12;
 }
 
 @media screen and (max-width: 800px){

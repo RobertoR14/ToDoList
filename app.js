@@ -156,11 +156,8 @@ function filterDoneTask(){
       lisTask.prepend(lis);
       console.log(el);
     } )
-/*     lisTask.childNodes.textContent = el) */
   }else {
-    
     createHTML();
-  }
  }
-
+ }
 
